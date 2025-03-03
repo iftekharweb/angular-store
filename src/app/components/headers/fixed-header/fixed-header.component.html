@@ -1,0 +1,30 @@
+<div class="flex justify-between items-center px-4 sm:px-6 md:px-8 py-4">
+  <!-- Back Button -->
+  <button
+    class="p-2 flex items-center gap-2 sm:gap-3 text-lg sm:text-xl text-gray-700"
+  >
+    <ion-icon name="chevron-back-outline"></ion-icon>
+    <p class="hidden sm:block">Back</p>
+  </button>
+  <div class="flex items-center gap-2 sm:gap-3">
+    <button
+      class="p-2 flex items-center text-lg sm:text-xl text-gray-700 
+      {{ appService.isDesktopMode() && 'border-b-2 border-gray-700' }}"
+      (click)="appService.setDisplayMode(true)"
+    >
+      <ion-icon name="desktop-outline"></ion-icon>
+    </button>
+    <button
+      class="p-2 flex items-center text-lg sm:text-xl text-gray-700 
+      {{ !appService.isDesktopMode() && 'border-b-2 border-gray-700' }}"
+      (click)="appService.setDisplayMode(false)"
+    >
+      <ion-icon name="phone-portrait-outline"></ion-icon>
+    </button>
+  </div>
+  <button
+    class="bg-green-800 px-3 sm:px-4 py-2 text-white rounded-lg font-semibold text-sm sm:text-base"
+  >
+    Sign up
+  </button>
+</div>

@@ -1,0 +1,43 @@
+<div class="w-full h-[60vh] relative">
+  <img
+    src="{{ slideImages()[slideIndex()] }}"
+    alt="cover-shampoo"
+    class="w-full h-full object-cover transition-all duration-700 ease-in-out"
+  />
+
+  <div
+    class="absolute top-1/2 sm:top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-white p-6 sm:p-8 rounded-xl w-[90%] sm:w-auto"
+  >
+    <h1 class="text-2xl sm:text-4xl font-bold text-[#2D336B] pb-3 sm:pb-4">
+      {{ slideTitle()[slideIndex()] }}
+    </h1>
+    <p class="text-sm sm:text-base text-[#2D336B]">
+      {{ slideText()[slideIndex()] }}
+    </p>
+    <button
+      class="bg-[#2D336B] text-white px-4 py-2 mt-3 sm:mt-4 rounded-xl text-sm sm:text-base"
+    >
+      Shop Now
+    </button>
+  </div>
+
+  <div
+    class="w-full flex justify-center items-center gap-4 py-2 border-b border-gray-300"
+  >
+    <button
+      class="flex justify-center items-center text-lg sm:text-xl"
+      (click)="previousImg()"
+    >
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </button>
+    <p class="text-xs sm:text-sm">
+      {{ slideIndex() + 1 }}/{{ slideImages().length }}
+    </p>
+    <button
+      class="flex justify-center items-center text-lg sm:text-xl"
+      (click)="nextImg()"
+    >
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </button>
+  </div>
+</div>

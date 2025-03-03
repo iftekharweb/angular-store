@@ -1,0 +1,56 @@
+<div class="w-full">
+  <div class="w-full flex justify-center items-center bg-blue-600 text-white p-2 text-sm sm:text-base">
+    <p class="font-semibold">Free shipping on orders $40+</p>
+  </div>
+
+  @if(isSearching()) {
+    <div class="w-full px-6 sm:px-16 md:px-32 lg:px-48 py-10 bg-[#2D336B] text-white flex justify-between items-center">
+      <div class="w-full">
+        <div class="flex justify-center items-center gap-3 relative w-full">
+          <div class="relative w-full sm:w-[60%] md:w-[50%]">
+            <input
+              type="text"
+              class="rounded-full border border-white py-2 sm:py-3 px-4 w-full pr-12 text-white bg-transparent"
+              placeholder="Search..."
+            />
+            <ion-icon
+              name="search-outline"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg sm:text-xl"
+            ></ion-icon>
+          </div>
+
+          <button
+            class="text-2xl sm:text-3xl flex justify-center items-center font-thin"
+            (click)="toggleIsSearching()"
+          >
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="w-full px-6 sm:px-16 md:px-32 lg:px-48 py-6 sm:py-10 bg-[#2D336B] text-white">
+      <div class="w-full flex justify-between items-center">
+        <button class="text-xl sm:text-2xl" (click)="toggleIsSearching()">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        
+        <p class="text-2xl sm:text-4xl uppercase font-semibold">Refresh</p>
+        
+        <button class="text-xl sm:text-2xl">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="flex flex-wrap justify-center items-center pt-6 sm:pt-8 gap-3 sm:gap-5 text-gray-300 text-sm sm:text-base">
+        <button class="hover:underline">Hire</button>
+        <button class="hover:underline">Body</button>
+        <button class="hover:underline">Face</button>
+        <button class="hover:underline">Kits</button>
+        <button class="hover:underline flex justify-center items-center">
+          <p class="pr-1">About</p>
+          <ion-icon name="chevron-down-outline" class="mt-1"></ion-icon>
+        </button>
+      </div>
+    </div>
+  }
+</div>
