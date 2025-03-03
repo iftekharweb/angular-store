@@ -15,11 +15,12 @@ import { IonIcon } from '@ionic/angular/standalone';
 import { FixedHeaderComponent } from './components/headers/fixed-header/fixed-header.component';
 import { NavHeaderComponent } from './components/headers/nav-header/nav-header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, IonIcon, FixedHeaderComponent, NavHeaderComponent],
+  imports: [RouterOutlet, IonIcon, FixedHeaderComponent, NavHeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
