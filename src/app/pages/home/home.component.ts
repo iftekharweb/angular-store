@@ -7,6 +7,7 @@ import { HairSectionComponent } from '../../components/home/hair-section/hair-se
 import { BodySectionComponent } from '../../components/home/body-section/body-section.component';
 import { FaceSectionComponent } from '../../components/home/face-section/face-section.component';
 import { KitSectionComponent } from '../../components/home/kit-section/kit-section.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { KitSectionComponent } from '../../components/home/kit-section/kit-secti
     BodySectionComponent,
     FaceSectionComponent,
     KitSectionComponent,
+    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
