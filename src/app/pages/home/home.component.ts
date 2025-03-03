@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
     this.httpService.getProducts().subscribe({
       next: (products) => {
         this.productService.products.set(products);
+        console.log("🚁 ~ PRODUCTS ~ ", products);
       },
       error: (error) => {
         console.error('There was an error!', error);
